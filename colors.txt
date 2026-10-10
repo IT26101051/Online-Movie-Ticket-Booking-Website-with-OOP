@@ -1,0 +1,145 @@
+
+# Design System Prompt — FRAME Movie Ticket Booking Website
+
+## 1. Overall Design Direction
+
+Design a modern, futuristic, cinematic movie ticket booking website named **FRAME**.
+
+The visual identity should combine cinematic imagery with a clean editorial layout and minimal, precise UI elements. The website should feel sophisticated, distinctive, immersive, and easy to use.
+
+**Core design principles:**
+- Minimal, sharp, and geometric.
+- Square corners and thin borders.
+- No unnecessary decoration.
+- No excessive gradients, shadows, glows, or rounded components.
+- Strong typography and generous whitespace.
+- Large cinematic movie images.
+- A hybrid interface combining dark cinematic sections and light browsing and booking sections.
+
+Avoid the typical cinema website aesthetic of red-and-black colors, rounded cards, pill buttons, and excessive neon effects.
+
+## 2. Color Palette
+
+Use these exact HEX colors consistently throughout the website.
+
+### Primary colors
+- Abyss — `#091A20`: Primary dark background, navigation, hero overlays.
+- Plasma Lime — `#BDF76B`: Primary CTA, selected seats, important interactive states.
+- Ion Mint — `#32D6CF`: Selected showtimes, secondary interactive highlights.
+- Lunar — `#F4F3EC`: Main light background and content sections.
+- Mist — `#DFE7E3`: Light borders, separators, subtle surfaces.
+- Graphite Teal — `#263B42`: Secondary dark surfaces, available seats, outlined elements.
+
+### Supporting colors
+- Primary dark text — `#15282E`
+- Secondary dark text — `#52635F`
+- Primary light text — `#F3F6F2`
+- Secondary light text — `#B9C9C6`
+- Occupied seat — `#15282E`
+- Accessible seat — `#8CB9FF`
+- Error — `#D95757`
+- Success — `#32D6A0`
+
+### Color distribution
+Use dark Abyss backgrounds for approximately 40–50% of the homepage and light Lunar backgrounds for approximately 50–60%. Adjust according to content.
+
+Use Plasma Lime sparingly. It must remain the signature accent, not a general decoration color.
+
+Use Ion Mint for selected secondary controls and premium or highlighted interactive states.
+
+Do not introduce red as the primary brand color.
+
+## 3. Layout and Visual Style
+
+- Use a responsive 12-column desktop grid.
+- Set the main desktop content width to approximately 1440px.
+- Use consistent spacing increments of 4, 8, 12, 16, 24, 32, 48, and 64px.
+- Use generous whitespace between sections.
+- Align elements precisely.
+- Prefer horizontal dividers and whitespace over enclosing every element in a card.
+- Use asymmetrical editorial layouts where appropriate.
+- Use full-width cinematic hero imagery with carefully controlled dark overlays.
+- Ensure mobile layouts remain clean and easy to navigate.
+
+## 4. Border and Corner Rules
+
+The website must use a sharp-edged, minimal design language.
+
+- Default border radius: `0px`.
+- Buttons: `0px`.
+- Movie cards: `0px`.
+- Input fields: `0px`.
+- Dropdowns: `0px`.
+- Showtime buttons: `0px`.
+- Seat-selection elements: square or minimally shaped.
+- Modals and panels: `0px` wherever practical.
+- Standard border thickness: `1px`.
+- Dark-surface border: `#263B42`.
+- Light-surface border: `#DFE7E3`.
+- Active border: `#BDF76B`.
+
+Do not use pill-shaped buttons, rounded cards, or large corner radii.
+
+## 5. Typography
+
+Use these fonts:
+
+- **Space Grotesk:** Headlines, section titles, movie titles, branding.
+- **Inter:** Body text, navigation, buttons, forms, prices, booking details.
+- **IBM Plex Mono:** Showtimes, seat numbers, cinema identifiers, technical metadata.
+
+Typography should feel modern, editorial, and highly legible.
+
+Use bold, expressive headings and small uppercase labels for metadata. Avoid excessive letter spacing in body text.
+
+## 6. Buttons and Interactive Components
+
+### Primary button
+- Background: `#BDF76B`.
+- Text: `#091A20`.
+- Border: none or a subtle 1px border.
+- Radius: `0px`.
+- Height: 44–48px.
+- Font: Inter, medium weight.
+- Horizontal padding: 20–24px.
+
+### Secondary button
+- Transparent background.
+- Thin 1px border.
+- Text color adapted to the background.
+- Square corners.
+- No shadow.
+
+### Hover and focus
+- Use subtle color inversion or brightness changes.
+- Use transitions of approximately 160–240ms.
+- Avoid bouncing, scaling excessively, or glowing.
+- Maintain visible keyboard focus indicators.
+
+## 7. Movie Cards
+
+Movie cards should prioritize cinematic artwork.
+
+- Use portrait posters with a 2:3 aspect ratio.
+- Avoid unnecessary outer card borders.
+- Avoid drop shadows.
+- Display the movie title, genre, runtime, release year, and showtimes with clear hierarchy.
+- Use thin dividers to separate metadata.
+- Keep card backgrounds transparent or consistent with the section background.
+- Use subtle image zoom on hover, without excessive movement.
+- Use lime for important actions and mint for selected showtimes.
+
+## 8. Seat Selection
+
+Create a clear, functional seat map using these states:
+
+- Available: `#263B42`
+- Selected: `#BDF76B`
+- Occupied: `#15282E`, with a distinct border or pattern.
+- Premium: `#32D6CF`
+- Accessible: `#8CB9FF`
+
+Use a subtle 1px outline, clear seat spacing, and a visible screen indicator.
+
+Never rely on color alone to communicate seat status. Include text labels, icons, or patterns where appropriate.
+
