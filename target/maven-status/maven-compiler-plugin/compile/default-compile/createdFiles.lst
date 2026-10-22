@@ -5,6 +5,7 @@ com\jmovie\db\UserDAO.class
 com\jmovie\servlet\AdminServlet.class
 com\jmovie\db\ReviewDAO.class
 com\jmovie\model\Booking.class
+com\jmovie\servlet\AuthServlet.class
 com\jmovie\util\PasswordUtil.class
 com\jmovie\model\RegularUser.class
 com\jmovie\db\DBConnection.class
