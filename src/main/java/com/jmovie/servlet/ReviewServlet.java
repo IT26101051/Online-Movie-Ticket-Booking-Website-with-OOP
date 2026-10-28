@@ -157,5 +157,8 @@ public class ReviewServlet extends HttpServlet {
     }
 
     private String trim(String s) { return s == null ? "" : s.trim(); }
+    /// update 102
     private String now() { return LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")); }
+
+
 }
