@@ -141,6 +141,8 @@ public class ReviewServlet extends HttpServlet {
         if (res.isCommitted()) return;
         String reviewId = req.getParameter("reviewId");
         ReviewDAO.updateStatus(reviewId, "REJECTED");
+
+        /// update 103
         res.sendRedirect(req.getContextPath() + "/admin/manage-reviews?msg=saved");
     }
 
