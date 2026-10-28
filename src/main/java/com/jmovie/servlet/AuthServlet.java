@@ -1,6 +1,4 @@
-
 // USER REGISTRATION-THARAKA
-
 
 package com.jmovie.servlet;
 
