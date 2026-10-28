@@ -1,12 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<footer class="footer">
+<footer class="footer" id="footer">
     <div class="container-fluid">
         <div class="footer-grid">
             <!-- Brand Column -->
             <div class="footer-col footer-col--brand">
                 <a href="<%= request.getContextPath() %>/movies" class="navbar__logo mb-3">
-                    <span class="logo-box">▶</span>
-                    <span class="logo-text">J<span>MOVIE</span></span>
+                    J<strong>MOVIE</strong>
                 </a>
                 <p class="footer-about">
                     JMovie is your premier digital movie ticket booking platform. Reserve real-time seat locations, explore now showing blockbusters, and stay updated with cinema editorials.
@@ -60,4 +59,4 @@
         </div>
     </div>
 </footer>
-<script src="<%= request.getContextPath() %>/js/main.js?v=4.2"></script>
+<script src="<%= request.getContextPath() %>/js/main.js?v=4.5"></script>

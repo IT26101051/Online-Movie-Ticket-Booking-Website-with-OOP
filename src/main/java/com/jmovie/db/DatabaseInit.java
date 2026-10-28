@@ -75,22 +75,32 @@ public class DatabaseInit {
             // Bookings
             st.executeUpdate(
                 "CREATE TABLE IF NOT EXISTS bookings (" +
-                "  id            VARCHAR(20)  PRIMARY KEY," +
-                "  user_id       VARCHAR(20)  NOT NULL," +
-                "  username      VARCHAR(50)  NOT NULL," +
-                "  showtime_id   VARCHAR(20)  NOT NULL," +
-                "  movie_id      VARCHAR(20)  NOT NULL," +
-                "  movie_title   VARCHAR(200) NOT NULL," +
-                "  seats         VARCHAR(200) NOT NULL," +
-                "  quantity      INT          NOT NULL DEFAULT 1," +
-                "  total_amount  DOUBLE       NOT NULL DEFAULT 0.0," +
-                "  status        VARCHAR(15)  NOT NULL DEFAULT 'CONFIRMED'," +
-                "  booking_date  VARCHAR(30)  NOT NULL," +
-                "  show_date     VARCHAR(15)  NOT NULL," +
-                "  show_time     VARCHAR(10)  NOT NULL," +
-                "  theatre_hall  VARCHAR(50)  DEFAULT ''" +
+                "  id             VARCHAR(20)  PRIMARY KEY," +
+                "  user_id        VARCHAR(20)  NOT NULL," +
+                "  username       VARCHAR(50)  NOT NULL," +
+                "  showtime_id    VARCHAR(20)  NOT NULL," +
+                "  movie_id       VARCHAR(20)  NOT NULL," +
+                "  movie_title    VARCHAR(200) NOT NULL," +
+                "  seats          VARCHAR(200) NOT NULL," +
+                "  quantity       INT          NOT NULL DEFAULT 1," +
+                "  total_amount   DOUBLE       NOT NULL DEFAULT 0.0," +
+                "  status         VARCHAR(15)  NOT NULL DEFAULT 'CONFIRMED'," +
+                "  booking_date   VARCHAR(30)  NOT NULL," +
+                "  show_date      VARCHAR(15)  NOT NULL," +
+                "  show_time      VARCHAR(10)  NOT NULL," +
+                "  theatre_hall   VARCHAR(50)  DEFAULT ''," +
+                "  payment_method VARCHAR(30)  DEFAULT 'CARD'," +
+                "  transaction_id VARCHAR(50)  DEFAULT ''" +
                 ") ENGINE=InnoDB DEFAULT CHARSET=utf8mb4"
             );
+
+            // Safe migration for existing installations
+            try {
+                st.executeUpdate("ALTER TABLE bookings ADD COLUMN payment_method VARCHAR(30) DEFAULT 'CARD'");
+            } catch (SQLException ignored) {}
+            try {
+                st.executeUpdate("ALTER TABLE bookings ADD COLUMN transaction_id VARCHAR(50) DEFAULT ''");
+            } catch (SQLException ignored) {}
 
             // Reviews
             st.executeUpdate(

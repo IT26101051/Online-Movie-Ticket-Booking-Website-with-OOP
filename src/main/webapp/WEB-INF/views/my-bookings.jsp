@@ -69,11 +69,13 @@
             <div>
                 <div class="booking-card__title"><%= b.getMovieTitle() %></div>
                 <div class="mono-text" style="font-size:0.75rem; color:var(--text-light-2); margin-top:4px;">
-                    BOOKING ID: <%= b.getId() %>
+                    BOOKING: <strong><%= b.getId() %></strong> &bull;
+                    TXN: <span style="color:var(--ion-mint);"><%= b.getTransactionId() != null && !b.getTransactionId().isEmpty() ? b.getTransactionId() : "TXN-PAID" %></span> &bull;
+                    <span style="color:var(--plasma-lime);"><%= b.getPaymentMethod() != null ? b.getPaymentMethod() : "CARD" %></span>
                 </div>
             </div>
             <% if ("CONFIRMED".equals(b.getStatus())) { %>
-            <span class="badge badge--green">CONFIRMED</span>
+            <span class="badge badge--green">CONFIRMED &bull; PAID</span>
             <% } else { %>
             <span class="badge badge--red">CANCELLED</span>
             <% } %>
@@ -106,13 +108,17 @@
         </div>
         <div class="booking-card__ft">
             <div class="booking-card__amount">LKR <%= String.format("%.2f", b.getTotalAmount()) %></div>
-            <% if ("CONFIRMED".equals(b.getStatus())) { %>
-            <button type="button" class="btn btn--secondary btn--sm"
-                    onclick="confirmAction('cancel-<%= b.getId() %>', 'Cancel reservation for <%= b.getMovieTitle() %>?')">
-                Cancel Booking
-            </button>
-            <form id="cancel-<%= b.getId() %>" method="post" action="<%= ctx %>/booking/cancel" style="display:none;">
-                <input type="hidden" name="bookingId" value="<%= b.getId() %>">
+            <div style="display:flex; gap:10px; align-items:center;">
+                <% if ("CONFIRMED".equals(b.getStatus())) { %>
+                <a href="<%= ctx %>/booking/success?id=<%= b.getId() %>" class="btn btn--outline btn--sm">
+                    🎟️ VIEW E-TICKET
+                </a>
+                <button type="button" class="btn btn--secondary btn--sm"
+                        onclick="confirmAction('cancel-<%= b.getId() %>', 'Cancel reservation for <%= b.getMovieTitle() %>?')">
+                    Cancel Booking
+                </button>
+                <form id="cancel-<%= b.getId() %>" method="post" action="<%= ctx %>/booking/cancel" style="display:none;">
+                    <input type="hidden" name="bookingId" value="<%= b.getId() %>">
             </form>
             <% } else { %>
             <a href="<%= ctx %>/movies" class="btn btn--outline btn--sm">Book Again</a>

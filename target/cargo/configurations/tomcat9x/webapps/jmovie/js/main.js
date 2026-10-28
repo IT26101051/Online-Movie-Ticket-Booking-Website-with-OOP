@@ -365,9 +365,148 @@ function initStarRating() {
 }
 
 function highlightNav() {
-    const path = location.pathname;
-    document.querySelectorAll('.navbar__link').forEach(link => {
-        const href = link.getAttribute('href') || '';
-        if (href && path.includes(href) && href !== '/') link.classList.add('active');
+    const navLinks = document.querySelectorAll('.navbar__link, .drawer__link');
+    if (!navLinks.length) return;
+
+    function setActiveNav(navKey) {
+        navLinks.forEach(link => {
+            const matches = link.getAttribute('data-nav') === navKey;
+            link.classList.toggle('active', matches);
+        });
+    }
+
+    const path = window.location.pathname;
+    const isMoviesHome = path.endsWith('/movies') || path.endsWith('/movies/') || path.endsWith('/jmovie/') || path.endsWith('/jmovie') || path.endsWith('/');
+
+    // 1. Initial State Check on Page Load
+    if (path.includes('/booking')) {
+        setActiveNav('booking');
+        return;
+    }
+    if (path.includes('/admin')) {
+        setActiveNav('admin');
+        return;
+    }
+
+    if (isMoviesHome) {
+        const hash = window.location.hash;
+        if (hash === '#movies-section') {
+            setActiveNav('movies');
+        } else if (hash === '#cinemas') {
+            setActiveNav('cinemas');
+        } else if (hash === '#footer') {
+            setActiveNav('contact');
+        } else {
+            setActiveNav('home');
+        }
+    }
+
+    function closeDrawer() {
+        const drawer = document.getElementById('mobile-drawer');
+        const overlay = document.getElementById('drawer-overlay');
+        if (drawer) drawer.classList.remove('active');
+        if (overlay) overlay.classList.remove('active');
+    }
+
+    let isManualClick = false;
+    let manualClickTimer = null;
+
+    // 2. Click Handling: Instantly move yellow line and smooth scroll
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            const targetNav = link.getAttribute('data-nav');
+            const href = link.getAttribute('href') || '';
+            const hashIndex = href.indexOf('#');
+            const hash = hashIndex !== -1 ? href.substring(hashIndex) : '';
+
+            if (isMoviesHome && (targetNav || hash)) {
+                if (targetNav === 'home') {
+                    e.preventDefault();
+                    setActiveNav('home');
+                    isManualClick = true;
+                    if (manualClickTimer) clearTimeout(manualClickTimer);
+                    manualClickTimer = setTimeout(() => { isManualClick = false; }, 850);
+
+                    if (history.pushState) {
+                        history.pushState(null, null, window.location.pathname);
+                    }
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    closeDrawer();
+                    return;
+                }
+
+                if (hash) {
+                    const targetEl = document.querySelector(hash);
+                    if (targetEl) {
+                        e.preventDefault();
+                        setActiveNav(targetNav);
+                        isManualClick = true;
+                        if (manualClickTimer) clearTimeout(manualClickTimer);
+                        manualClickTimer = setTimeout(() => { isManualClick = false; }, 850);
+
+                        if (history.pushState) {
+                            history.pushState(null, null, hash);
+                        }
+                        targetEl.scrollIntoView({ behavior: 'smooth' });
+                        closeDrawer();
+                        return;
+                    }
+                }
+            }
+
+            if (targetNav) {
+                setActiveNav(targetNav);
+            }
+            closeDrawer();
+        });
     });
+
+    // Also support "BUY TICKETS" buttons scrolling to movies section
+    document.querySelectorAll('.btn--buy-tickets, a[href*="#movies-section"]').forEach(btn => {
+        btn.addEventListener('click', () => {
+            if (isMoviesHome) {
+                setActiveNav('movies');
+            }
+            closeDrawer();
+        });
+    });
+
+    // 3. ScrollSpy: Update active yellow line as user scrolls through sections
+    if (isMoviesHome) {
+        const homeSection = document.getElementById('hero-slider') || document.body;
+        const moviesSection = document.getElementById('movies-section');
+        const cinemasSection = document.getElementById('cinemas');
+        const footerSection = document.getElementById('footer');
+
+        function updateScrollNav() {
+            if (isManualClick) return;
+
+            const scrollY = window.scrollY;
+            const windowHeight = window.innerHeight;
+            const docHeight = document.documentElement.scrollHeight;
+
+            // Reached bottom / footer
+            if (scrollY + windowHeight >= docHeight - 120) {
+                setActiveNav('contact');
+                return;
+            }
+
+            // Top of the page
+            if (scrollY < 220) {
+                setActiveNav('home');
+                return;
+            }
+
+            const threshold = 160;
+            if (cinemasSection && scrollY >= cinemasSection.offsetTop - threshold) {
+                setActiveNav('cinemas');
+            } else if (moviesSection && scrollY >= moviesSection.offsetTop - threshold) {
+                setActiveNav('movies');
+            } else {
+                setActiveNav('home');
+            }
+        }
+
+        window.addEventListener('scroll', updateScrollNav, { passive: true });
+    }
 }

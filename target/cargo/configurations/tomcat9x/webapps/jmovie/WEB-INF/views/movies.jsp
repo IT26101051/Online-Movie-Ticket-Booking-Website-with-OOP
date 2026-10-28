@@ -232,6 +232,60 @@
         </div>
     </section>
 
+    <!-- CINEMAS & VENUES SECTION -->
+    <section class="section section--cinemas" id="cinemas">
+        <div class="container-fluid">
+            <div class="section-header">
+                <span class="section-tag mono-text">// PREMIUM VENUES</span>
+                <h2 class="section-title">THE CINEMA <span class="highlight">EXPERIENCE</span></h2>
+            </div>
+
+            <div class="cinemas-grid">
+                <!-- Cinema Venue 1 -->
+                <div class="cinema-card scroll-reveal">
+                    <div class="cinema-card__badge mono-text">IMAX WITH LASER</div>
+                    <h3 class="cinema-card__title">Colombo Grand IMAX</h3>
+                    <p class="cinema-card__desc">Experience groundbreaking 4K laser projection with dual 12-channel spatial audio, delivering pristine imagery and monumental sound for world-class blockbusters.</p>
+                    <div class="cinema-card__features mono-text">
+                        <span>70MM DUAL LASER</span> &bull; <span>480 SEATS</span> &bull; <span>CURVED SCREEN</span>
+                    </div>
+                    <div class="cinema-card__footer">
+                        <span class="cinema-card__loc mono-text">HALL 01 &bull; LEVEL 3</span>
+                        <a href="#movies-section" class="btn btn--outline btn--sm">VIEW SHOWTIMES</a>
+                    </div>
+                </div>
+
+                <!-- Cinema Venue 2 -->
+                <div class="cinema-card scroll-reveal">
+                    <div class="cinema-card__badge mono-text">DOLBY ATMOS</div>
+                    <h3 class="cinema-card__title">Dolby Soundstage Arena</h3>
+                    <p class="cinema-card__desc">Equipped with 64 discrete speaker outputs moving audio with pinpoint precision all around you, including overhead, for an unprecedented sensory immersion.</p>
+                    <div class="cinema-card__features mono-text">
+                        <span>DOLBY 3D READY</span> &bull; <span>320 SEATS</span> &bull; <span>4K DIGITAL</span>
+                    </div>
+                    <div class="cinema-card__footer">
+                        <span class="cinema-card__loc mono-text">HALL 02 &bull; LEVEL 2</span>
+                        <a href="#movies-section" class="btn btn--outline btn--sm">VIEW SHOWTIMES</a>
+                    </div>
+                </div>
+
+                <!-- Cinema Venue 3 -->
+                <div class="cinema-card scroll-reveal">
+                    <div class="cinema-card__badge mono-text">VIP LUXURY</div>
+                    <h3 class="cinema-card__title">The Director's Club VIP</h3>
+                    <p class="cinema-card__desc">Ultimate luxury with motorized plush leather recliners, personal tables, in-seat gourmet dining service, and intimate boutique seating.</p>
+                    <div class="cinema-card__features mono-text">
+                        <span>FULL RECLINER</span> &bull; <span>60 SEATS</span> &bull; <span>IN-SEAT DINING</span>
+                    </div>
+                    <div class="cinema-card__footer">
+                        <span class="cinema-card__loc mono-text">HALL 03 &bull; PENTHOUSE</span>
+                        <a href="#movies-section" class="btn btn--outline btn--sm">VIEW SHOWTIMES</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ARTICLES / NEWS SECTION (FULL WIDTH) -->
     <section class="section section--articles" id="articles">
         <div class="container-fluid">

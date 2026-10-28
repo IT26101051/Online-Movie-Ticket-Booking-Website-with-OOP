@@ -21,6 +21,7 @@ com\jmovie\model\Seat.class
 com\jmovie\servlet\ShowtimeServlet.class
 com\jmovie\util\FileHandler.class
 com\jmovie\model\VIPSeat.class
+com\jmovie\model\Payment.class
 com\jmovie\util\DataStore.class
 com\jmovie\model\User.class
 com\jmovie\util\IdGenerator.class

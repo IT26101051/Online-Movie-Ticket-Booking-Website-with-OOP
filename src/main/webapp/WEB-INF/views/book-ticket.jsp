@@ -123,11 +123,11 @@
                     <span id="sel-total">LKR 0.00</span>
                 </div>
 
-                <form method="post" action="<%= ctx %>/booking/create" style="margin-top:24px;">
+                <form method="post" action="<%= ctx %>/booking/checkout" style="margin-top:24px;">
                     <input type="hidden" name="showtimeId"    value="<%= showtime.getId() %>">
                     <input type="hidden" name="selectedSeats" id="selectedSeats" value="">
                     <button type="submit" id="confirm-btn" class="btn btn--primary btn--block" disabled>
-                        CONFIRM BOOKING
+                        PROCEED TO PAYMENT &rarr;
                     </button>
                 </form>
 

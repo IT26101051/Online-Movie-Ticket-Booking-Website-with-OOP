@@ -46,7 +46,7 @@ public class BookingDAO {
     }
 
     public static boolean insert(Booking b) {
-        String sql = "INSERT INTO bookings (id,user_id,username,showtime_id,movie_id,movie_title,seats,quantity,total_amount,status,booking_date,show_date,show_time,theatre_hall) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        String sql = "INSERT INTO bookings (id,user_id,username,showtime_id,movie_id,movie_title,seats,quantity,total_amount,status,booking_date,show_date,show_time,theatre_hall,payment_method,transaction_id) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         try (Connection c = DBConnection.getConnection();
              PreparedStatement ps = c.prepareStatement(sql)) {
             ps.setString(1,  b.getId());
@@ -63,6 +63,8 @@ public class BookingDAO {
             ps.setString(12, b.getShowDate());
             ps.setString(13, b.getShowTime());
             ps.setString(14, b.getTheatreHall());
+            ps.setString(15, b.getPaymentMethod() != null ? b.getPaymentMethod() : "CARD");
+            ps.setString(16, b.getTransactionId() != null ? b.getTransactionId() : "");
             return ps.executeUpdate() > 0;
         } catch (SQLException e) { log(e); return false; }
     }
@@ -126,6 +128,17 @@ public class BookingDAO {
     }
 
     private static Booking map(ResultSet rs) throws SQLException {
+        String pMethod = "CARD";
+        String txnId = "";
+        try {
+            pMethod = rs.getString("payment_method");
+            if (pMethod == null) pMethod = "CARD";
+        } catch (SQLException ignored) {}
+        try {
+            txnId = rs.getString("transaction_id");
+            if (txnId == null) txnId = "";
+        } catch (SQLException ignored) {}
+
         return new Booking(
             rs.getString("id"), rs.getString("user_id"),
             rs.getString("username"), rs.getString("showtime_id"),
@@ -133,7 +146,8 @@ public class BookingDAO {
             rs.getString("seats"), rs.getInt("quantity"),
             rs.getDouble("total_amount"), rs.getString("status"),
             rs.getString("booking_date"), rs.getString("show_date"),
-            rs.getString("show_time"), rs.getString("theatre_hall")
+            rs.getString("show_time"), rs.getString("theatre_hall"),
+            pMethod, txnId
         );
     }
 
