@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ///// MOVIEW REVIEW - KAVIN
+=======
+////// PRABODHA'S PART //////
+>>>>>>> f1201e921a8dcb4b607b5dc855381e747deb5d9d
 
 
 
@@ -141,8 +145,11 @@ public class ReviewServlet extends HttpServlet {
         if (res.isCommitted()) return;
         String reviewId = req.getParameter("reviewId");
         ReviewDAO.updateStatus(reviewId, "REJECTED");
+<<<<<<< HEAD
 
         /// update 103
+=======
+>>>>>>> f1201e921a8dcb4b607b5dc855381e747deb5d9d
         res.sendRedirect(req.getContextPath() + "/admin/manage-reviews?msg=saved");
     }
 
@@ -159,8 +166,12 @@ public class ReviewServlet extends HttpServlet {
     }
 
     private String trim(String s) { return s == null ? "" : s.trim(); }
+<<<<<<< HEAD
     /// update 102
     private String now() { return LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")); }
 
 
+=======
+    private String now() { return LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")); }
+>>>>>>> f1201e921a8dcb4b607b5dc855381e747deb5d9d
 }
