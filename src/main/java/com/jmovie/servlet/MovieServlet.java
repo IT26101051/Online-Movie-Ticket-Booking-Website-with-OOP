@@ -28,6 +28,7 @@ import java.util.List;
  *
  * Main responsibilities:
  *   1. Display all movies.
+ *   2. Display individual movie details.
  *
  */
 @WebServlet(name = "MovieServlet", urlPatterns = {"/movies", "/movies/*"})
