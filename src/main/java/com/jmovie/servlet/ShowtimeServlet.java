@@ -40,3 +40,33 @@ protected void doGet(HttpServletRequest req, HttpServletResponse res)
             "/WEB-INF/views/admin/manage-showtimes.jsp"
     ).forward(req, res);
 }
+//HANDLE POST REQUESTS (doPost)
+@Override
+protected void doPost(HttpServletRequest req, HttpServletResponse res)
+        throws ServletException, IOException {
+
+    requireAdmin(req, res);
+    if (res.isCommitted()) return;
+
+    req.setCharacterEncoding("UTF-8");
+
+    String path = req.getPathInfo();
+    if (path == null) path = "/";
+
+    switch (path) {
+        case "/add":
+            addShowtime(req, res);
+            break;
+
+        case "/edit":
+            editShowtime(req, res);
+            break;
+
+        case "/delete":
+            deleteShowtime(req, res);
+            break;
+
+        default:
+            res.sendRedirect(req.getContextPath() + "/showtimes");
+    }
+}
