@@ -21,3 +21,22 @@ import java.util.List;
  */
 @WebServlet(name = "ShowtimeServlet", urlPatterns = {"/showtimes", "/showtimes/*"})
 public class ShowtimeServlet extends HttpServlet {
+
+//DISPLAY SHOWTIMES (doGet)
+@Override
+protected void doGet(HttpServletRequest req, HttpServletResponse res)
+        throws ServletException, IOException {
+
+    requireAdmin(req, res);
+    if (res.isCommitted()) return;
+
+    List<Showtime> showtimes = ShowtimeDAO.findAll();
+    List<Movie> movies = MovieDAO.findAll();
+
+    req.setAttribute("showtimes", showtimes);
+    req.setAttribute("movies", movies);
+
+    req.getRequestDispatcher(
+            "/WEB-INF/views/admin/manage-showtimes.jsp"
+    ).forward(req, res);
+}
