@@ -88,3 +88,22 @@ private void addShowtime(HttpServletRequest req, HttpServletResponse res)
         res.sendRedirect(req.getContextPath() + "/showtimes?error=invalid");
     }
 }
+
+//EDIT SHOWTIME
+private void editShowtime(HttpServletRequest req, HttpServletResponse res)
+        throws IOException {
+
+    try {
+        String id = req.getParameter("id");
+
+        Showtime s = buildFromRequest(id, req);
+
+        ShowtimeDAO.update(s);
+
+        res.sendRedirect(req.getContextPath() + "/showtimes?msg=saved");
+
+    } catch (NumberFormatException e) {
+
+        res.sendRedirect(req.getContextPath() + "/showtimes?error=invalid");
+    }
+}
