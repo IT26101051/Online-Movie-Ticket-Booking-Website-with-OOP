@@ -58,6 +58,9 @@ public class MovieServlet extends HttpServlet {
         }
     }
 
+    /**
+     * Handles HTTP POST requests for movie management.
+     */
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse res)
             throws ServletException, IOException {
