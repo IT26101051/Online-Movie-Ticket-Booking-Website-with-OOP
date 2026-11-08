@@ -35,6 +35,7 @@ import java.util.List;
  *   /movies          - Display all movies.
  *   /movies/detail/{id} - Display movie details.
  *   /movies/add - Add a new movie.
+ *   /movies/edit - Edit an existing movie.
  *
  */
 @WebServlet(name = "MovieServlet", urlPatterns = {"/movies", "/movies/*"})
