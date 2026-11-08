@@ -31,6 +31,9 @@ import java.util.List;
  *   2. Display individual movie details.
  *   3. Allow administrators to add, edit, and delete movies.
  *
+ * URL mappings:
+ *   /movies          - Display all movies.
+ *
  */
 @WebServlet(name = "MovieServlet", urlPatterns = {"/movies", "/movies/*"})
 public class MovieServlet extends HttpServlet {
