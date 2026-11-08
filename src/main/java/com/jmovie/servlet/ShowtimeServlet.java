@@ -40,6 +40,7 @@ protected void doGet(HttpServletRequest req, HttpServletResponse res)
             "/WEB-INF/views/admin/manage-showtimes.jsp"
     ).forward(req, res);
 }
+
 //HANDLE POST REQUESTS (doPost)
 @Override
 protected void doPost(HttpServletRequest req, HttpServletResponse res)
@@ -68,5 +69,22 @@ protected void doPost(HttpServletRequest req, HttpServletResponse res)
 
         default:
             res.sendRedirect(req.getContextPath() + "/showtimes");
+    }
+}
+
+//ADD SHOWTIME
+private void addShowtime(HttpServletRequest req, HttpServletResponse res)
+        throws IOException {
+
+    try {
+        Showtime s = buildFromRequest(IdGenerator.generate("SHW"), req);
+
+        ShowtimeDAO.insert(s);
+
+        res.sendRedirect(req.getContextPath() + "/showtimes?msg=saved");
+
+    } catch (NumberFormatException e) {
+
+        res.sendRedirect(req.getContextPath() + "/showtimes?error=invalid");
     }
 }
