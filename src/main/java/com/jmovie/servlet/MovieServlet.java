@@ -35,6 +35,9 @@ import java.util.List;
 @WebServlet(name = "MovieServlet", urlPatterns = {"/movies", "/movies/*"})
 public class MovieServlet extends HttpServlet {
 
+    /**
+     * Handles HTTP GET requests.
+     */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res)
             throws ServletException, IOException {
