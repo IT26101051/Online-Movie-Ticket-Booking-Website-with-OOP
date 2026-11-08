@@ -33,6 +33,7 @@ import java.util.List;
  *
  * URL mappings:
  *   /movies          - Display all movies.
+ *   /movies/detail/{id} - Display movie details.
  *
  */
 @WebServlet(name = "MovieServlet", urlPatterns = {"/movies", "/movies/*"})
