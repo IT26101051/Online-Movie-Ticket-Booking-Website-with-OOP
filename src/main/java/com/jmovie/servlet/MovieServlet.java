@@ -1,6 +1,6 @@
 /////// HOME PAGE - PABODA
 
-
+// Package declaration
 
 package com.jmovie.servlet;
 
@@ -140,6 +140,7 @@ public class MovieServlet extends HttpServlet {
             res.sendRedirect(req.getContextPath() + "/auth/login?error=unauthorized");
         }
     }
+
 
     private String trim(String s) { return s == null ? "" : s.trim(); }
 }
