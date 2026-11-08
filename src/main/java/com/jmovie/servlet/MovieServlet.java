@@ -60,6 +60,9 @@ public class MovieServlet extends HttpServlet {
 
     /**
      * Handles HTTP POST requests for movie management.
+     *
+     * First, checks whether the logged-in user is an administrator.
+     * Then retrieves the action parameter from the request.
      */
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse res)
