@@ -1,6 +1,6 @@
 /////// HOME PAGE - PABODA
 
-
+// Package declaration
 
 package com.jmovie.servlet;
 
@@ -141,9 +141,12 @@ public class MovieServlet extends HttpServlet {
         }
     }
 
+
     private String trim(String s) { return s == null ? "" : s.trim(); }
 }
 
 // Paboda Update 101
 
 // Paboda Update 102
+
+// Paboda Update 103

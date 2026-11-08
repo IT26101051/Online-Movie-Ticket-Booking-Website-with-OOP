@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb1057db-dfde-4182-aee2-1651ff8c7757" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jmovie/servlet/ReviewServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jmovie/servlet/ReviewServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jmovie/servlet/MovieServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jmovie/servlet/MovieServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,10 +15,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7,
-  "fromUser": false
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7,
+  &quot;fromUser&quot;: false
+}</component>
   <component name="ProjectId" id="3LK1rdAE75K0wI90S0dq1AQuRk3" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -31,7 +31,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "kavin",
+    "git-widget-placeholder": "Paboda",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/projects/Jmovies-main",
     "nodejs_package_manager_path": "npm"
