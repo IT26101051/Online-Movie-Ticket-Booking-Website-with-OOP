@@ -107,3 +107,14 @@ private void editShowtime(HttpServletRequest req, HttpServletResponse res)
         res.sendRedirect(req.getContextPath() + "/showtimes?error=invalid");
     }
 }
+
+//DELETE SHOWTIME
+private void deleteShowtime(HttpServletRequest req, HttpServletResponse res)
+        throws IOException {
+
+    String id = req.getParameter("id");
+
+    ShowtimeDAO.delete(id);
+
+    res.sendRedirect(req.getContextPath() + "/showtimes?msg=deleted");
+}
