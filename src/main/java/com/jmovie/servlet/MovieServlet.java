@@ -25,6 +25,10 @@ import java.util.List;
  * Handles movie listing, detail, and admin CRUD operations via MySQL database.
  * Routes: /movies, /movies/detail/{id}, POST /movies/add|edit|delete
  * MovieServlet handles movie-related operations.
+ *
+ * Main responsibilities:
+ *   1. Display all movies.
+ *
  */
 @WebServlet(name = "MovieServlet", urlPatterns = {"/movies", "/movies/*"})
 public class MovieServlet extends HttpServlet {
