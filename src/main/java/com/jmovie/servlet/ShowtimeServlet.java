@@ -118,3 +118,24 @@ private void deleteShowtime(HttpServletRequest req, HttpServletResponse res)
 
     res.sendRedirect(req.getContextPath() + "/showtimes?msg=deleted");
 }
+
+//BUILD SHOWTIME FROM REQUEST
+private Showtime buildFromRequest(String id, HttpServletRequest req) {
+
+    String movieId = req.getParameter("movieId");
+    String movieTitle = req.getParameter("movieTitle");
+    String hall = req.getParameter("theatreHall");
+    String date = req.getParameter("date");
+    String time = req.getParameter("time");
+
+    int total = Integer.parseInt(req.getParameter("totalSeats"));
+    double price = Double.parseDouble(req.getParameter("price"));
+
+    if (movieTitle == null || movieTitle.isEmpty()) {
+        Movie m = MovieDAO.findById(movieId);
+        movieTitle = m != null ? m.getTitle() : "Unknown";
+    }
+
+    return new Showtime(id, movieId, movieTitle, hall, date, time,
+            total, total, price, "");
+}
