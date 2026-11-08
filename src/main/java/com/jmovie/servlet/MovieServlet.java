@@ -41,6 +41,8 @@ public class MovieServlet extends HttpServlet {
      * If the requested path is empty or "/",
      * it displays the list of all movies.
      *
+     * If the path starts with "/detail/",
+     * it extracts the movie ID and displays movie details.
      */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res)
