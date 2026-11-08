@@ -2,6 +2,7 @@
 
 // Package declaration
 
+
 package com.jmovie.servlet;
 
 import com.jmovie.db.MovieDAO;
@@ -18,9 +19,12 @@ import javax.servlet.http.*;
 import java.io.IOException;
 import java.util.List;
 
+
+
 /**
  * Handles movie listing, detail, and admin CRUD operations via MySQL database.
  * Routes: /movies, /movies/detail/{id}, POST /movies/add|edit|delete
+ * MovieServlet handles movie-related operations.
  */
 @WebServlet(name = "MovieServlet", urlPatterns = {"/movies", "/movies/*"})
 public class MovieServlet extends HttpServlet {
