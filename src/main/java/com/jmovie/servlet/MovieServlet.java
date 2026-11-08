@@ -63,6 +63,11 @@ public class MovieServlet extends HttpServlet {
      *
      * First, checks whether the logged-in user is an administrator.
      * Then retrieves the action parameter from the request.
+     *
+     * Based on the action, it performs one of the following:
+     *  - add: Add a new movie.
+     *  - edit: Update an existing movie.
+     *  - delete: Delete a movie.
      */
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse res)
