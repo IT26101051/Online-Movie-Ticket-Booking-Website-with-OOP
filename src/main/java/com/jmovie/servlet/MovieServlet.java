@@ -37,6 +37,10 @@ public class MovieServlet extends HttpServlet {
 
     /**
      * Handles HTTP GET requests.
+     *
+     * If the requested path is empty or "/",
+     * it displays the list of all movies.
+     *
      */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res)
