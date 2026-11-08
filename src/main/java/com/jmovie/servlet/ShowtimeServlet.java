@@ -139,3 +139,16 @@ private Showtime buildFromRequest(String id, HttpServletRequest req) {
     return new Showtime(id, movieId, movieTitle, hall, date, time,
             total, total, price, "");
 }
+
+// ADMIN AUTHORIZATION
+
+    private void requireAdmin(HttpServletRequest req, HttpServletResponse res)
+            throws IOException {
+
+        HttpSession s = req.getSession(false);
+
+        if (s == null || !"ADMIN".equals(s.getAttribute("role"))) {
+            res.sendRedirect(req.getContextPath() + "/auth/login?error=unauthorized");
+        }
+    }
+}
