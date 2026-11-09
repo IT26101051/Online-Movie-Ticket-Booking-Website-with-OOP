@@ -201,6 +201,8 @@ public class MovieServlet extends HttpServlet {
      */
 
     // Sets the default status to NOW_SHOWING if no status is provided.
+    // Returns a new Movie object containing the submitted information.
+
     private Movie buildMovieFromRequest(String id, HttpServletRequest req) {
         String title       = trim(req.getParameter("title"));
         String genre       = trim(req.getParameter("genre"));
