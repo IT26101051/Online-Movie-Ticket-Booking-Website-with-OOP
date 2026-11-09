@@ -293,7 +293,7 @@ public class BookingServlet extends HttpServlet {
 
         res.sendRedirect(req.getContextPath() + "/booking?msg=cancelled");
     }
-
+    // Shared authentication check used by both GET and POST requests in this servlet.
     // ── Auth Guard ─────────────────────────────────────────────────────────
     private void requireLogin(HttpServletRequest req, HttpServletResponse res) throws IOException {
         HttpSession s = req.getSession(false);
