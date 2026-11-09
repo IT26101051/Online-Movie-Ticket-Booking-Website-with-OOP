@@ -214,7 +214,7 @@ public class MovieServlet extends HttpServlet {
         return new Movie(id, title, genre, description, duration, rating, posterUrl, releaseDate, status);
     }
 
-    // Checks whether the current user has administrator privileges.
+    // Verifies that the current user has admin privileges.
     // Retrieves the existing HTTP session.
 
     /*
