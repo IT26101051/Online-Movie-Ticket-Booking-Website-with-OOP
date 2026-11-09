@@ -21,9 +21,11 @@ import java.time.format.DateTimeFormatter;
  * Handles user authentication via MySQL database: login, logout, registration.
  * Routes: /auth/login, /auth/logout, /auth/register
  */
+//Configure AuthServlet
 @WebServlet(name = "AuthServlet", urlPatterns = {"/auth", "/auth/*"})
 public class AuthServlet extends HttpServlet {
 
+//Handle GET requests
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res)
             throws ServletException, IOException {
@@ -43,7 +45,7 @@ public class AuthServlet extends HttpServlet {
                 req.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(req, res);
         }
     }
-
+//Handle POST requests
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse res)
             throws ServletException, IOException {
