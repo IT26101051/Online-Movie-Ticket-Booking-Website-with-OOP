@@ -199,8 +199,7 @@ public class MovieServlet extends HttpServlet {
         return new Movie(id, title, genre, description, duration, rating, posterUrl, releaseDate, status);
     }
     // Checks whether the current user has administrator privileges.
-    // Retrieves the existing HTTP session.
-    // redirects the user to the login page.
+
     private void requireAdmin(HttpServletRequest req, HttpServletResponse res) throws IOException {
         HttpSession session = req.getSession(false);
         if (session == null || !"ADMIN".equals(session.getAttribute("role"))) {
