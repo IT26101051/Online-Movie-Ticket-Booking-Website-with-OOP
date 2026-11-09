@@ -186,7 +186,6 @@ public class MovieServlet extends HttpServlet {
         return new Movie(id, title, genre, description, duration, rating, posterUrl, releaseDate, status);
     }
 
-    // If no session exists or the user is not an administrator.
     // redirects the user to the login page.
     private void requireAdmin(HttpServletRequest req, HttpServletResponse res) throws IOException {
         HttpSession session = req.getSession(false);
