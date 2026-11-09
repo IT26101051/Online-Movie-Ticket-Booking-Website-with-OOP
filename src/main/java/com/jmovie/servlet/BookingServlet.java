@@ -28,6 +28,8 @@ import java.util.UUID;
  * - Booking Confirmation & E-Ticket Receipt (/booking/success)
  * - My Bookings List & Cancellation (/booking, /booking/cancel)
  */
+// Maps the /booking URL and its sub-paths to this servlet.
+// The sub-path is used below to decide which booking operation should run.
 @WebServlet(name = "BookingServlet", urlPatterns = {"/booking", "/booking/*"})
 public class BookingServlet extends HttpServlet {
 
@@ -306,3 +308,5 @@ public class BookingServlet extends HttpServlet {
 //ushan update 120
 
 //ushan update 121
+
+// ushan update 122
