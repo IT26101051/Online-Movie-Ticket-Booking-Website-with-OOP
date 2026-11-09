@@ -9,6 +9,7 @@ import com.jmovie.db.ShowtimeDAO;
 import com.jmovie.model.*;
 import com.jmovie.util.IdGenerator;
 
+// Servlet and HTTP classes provide request handling, session access, and page navigation.
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
@@ -300,3 +301,4 @@ public class BookingServlet extends HttpServlet {
     }
 }
 // ushan update 112
+// ushan update 113
