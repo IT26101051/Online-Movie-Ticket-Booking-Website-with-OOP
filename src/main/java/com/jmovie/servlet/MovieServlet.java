@@ -180,6 +180,8 @@ public class MovieServlet extends HttpServlet {
 
     // Helper method to create a Movie object from form data.
     // Retrieves and cleans all submitted movie details.
+    // Converts duration and rating into numeric values.
+    // Sets the default status to NOW_SHOWING if no status is provided
     private Movie buildMovieFromRequest(String id, HttpServletRequest req) {
         String title       = trim(req.getParameter("title"));
         String genre       = trim(req.getParameter("genre"));
