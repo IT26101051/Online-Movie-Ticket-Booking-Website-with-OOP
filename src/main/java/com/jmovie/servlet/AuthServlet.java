@@ -61,6 +61,7 @@ public class AuthServlet extends HttpServlet {
     }
 
     // ── Login ──────────────────────────────────────────────────────────────
+    // Handle the authentication process
     private void handleLogin(HttpServletRequest req, HttpServletResponse res)
             throws ServletException, IOException {
         String username = trim(req.getParameter("username"));

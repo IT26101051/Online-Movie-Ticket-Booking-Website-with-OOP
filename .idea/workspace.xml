@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb1057db-dfde-4182-aee2-1651ff8c7757" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="cb1057db-dfde-4182-aee2-1651ff8c7757" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +12,65 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.2019898879857767E-8" />
+      <entry key="MS500" value="0.02610219417295987" />
+      <entry key="S2" value="0.5425963164547721" />
+      <entry key="S5" value="1.7219255114041339" />
+      <entry key="S10" value="3.825505308665894" />
+      <entry key="S30" value="11.747184330087201" />
+      <entry key="S60" value="19.791145802805858" />
+      <entry key="M2" value="31.955314130932916" />
+      <entry key="M5" value="54.79096772126064" />
+      <entry key="M10" value="70.34075816353086" />
+      <entry key="M15" value="77.1300899381329" />
+      <entry key="M30" value="84.96235743077618" />
+      <entry key="H1" value="90.03814665282417" />
+      <entry key="H2" value="100.28091085158238" />
+      <entry key="H4" value="123.1448501520941" />
+      <entry key="D1" value="180.49179072335932" />
+      <entry key="W1" value="197.80111375343418" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="1.0000000000005187" />
+      <entry key="MS500" value="1.0034913482904562" />
+      <entry key="S2" value="1.2430794773256713" />
+      <entry key="S5" value="1.567935894302986" />
+      <entry key="S10" value="1.7536152406837977" />
+      <entry key="S30" value="1.9147192860869322" />
+      <entry key="S60" value="2.064680006229873" />
+      <entry key="M2" value="2.5872560450136084" />
+      <entry key="M5" value="3.8308602781119965" />
+      <entry key="M10" value="4.696843568726422" />
+      <entry key="M15" value="5.07305209173707" />
+      <entry key="M30" value="5.504889898496438" />
+      <entry key="H1" value="5.780530543639986" />
+      <entry key="H2" value="6.290195860579104" />
+      <entry key="H4" value="7.377772585818789" />
+      <entry key="D1" value="10.05142724193757" />
+      <entry key="W1" value="10.8522122356496" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="5.417934990412012E-4" />
+      <entry key="MS500" value="0.24891219072792078" />
+      <entry key="S2" value="1.3970489362796117" />
+      <entry key="S5" value="3.0717742246640465" />
+      <entry key="S10" value="5.451723006798764" />
+      <entry key="S30" value="13.611076281644381" />
+      <entry key="S60" value="21.82588397995531" />
+      <entry key="M2" value="34.52132349043035" />
+      <entry key="M5" value="58.60651400580096" />
+      <entry key="M10" value="75.02717387855168" />
+      <entry key="M15" value="82.19532391514244" />
+      <entry key="M30" value="90.46281838216873" />
+      <entry key="H1" value="95.81629658692685" />
+      <entry key="H2" value="106.56978188927194" />
+      <entry key="H4" value="130.52182065796305" />
+      <entry key="D1" value="190.54302674165905" />
+      <entry key="W1" value="208.65329619767596" />
+    </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7,
@@ -30,13 +87,49 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Smart Tomcat.Tomcat: jmovie.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "Paboda",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "Tharaka",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/projects/Jmovies-main",
-    "nodejs_package_manager_path": "npm"
+    "last_opened_file_path": "C:/Users/Tharaka Ariyawansha/Desktop/Online-Movie-Ticket-Booking-Website-with-OOP",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "to.speed.mode.migration.done": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="Tomcat: jmovie" type="com.poratu.idea.plugins.tomcat">
+      <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
+      <predefined_log_file enabled="true" id="Tomcat Access Log" />
+      <predefined_log_file id="Tomcat Catalina Log" />
+      <predefined_log_file id="Tomcat Manager Log" />
+      <predefined_log_file id="Tomcat Host Manager Log" />
+      <option name="catalinaBase" value="" />
+      <option name="contextPath" value="/jmovie" />
+      <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
+      <option name="envOptions">
+        <map />
+      </option>
+      <option name="extraClassPath" value="" />
+      <option name="tomcatInfo">
+        <TomcatInfo>
+          <option name="name" value="Apache Tomcat/8.5.96" />
+          <option name="path" value="$PROJECT_DIR$/../../../../xampp/tomcat" />
+          <option name="version" value="8.5.96.0" />
+        </TomcatInfo>
+      </option>
+      <option name="vmOptions" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
