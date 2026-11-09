@@ -42,6 +42,7 @@ public class BookingServlet extends HttpServlet {
         requireLogin(req, res);
         if (res.isCommitted()) return;
 
+ // Read the URL sub-path to identify the page requested by the user.
         String path = req.getPathInfo();
         if ("/new".equals(path)) {
             showBookingPage(req, res);
