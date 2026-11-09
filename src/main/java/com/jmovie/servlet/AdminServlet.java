@@ -17,6 +17,7 @@ import java.util.List;
 @WebServlet(name = "AdminServlet", urlPatterns = {"/admin", "/admin/*"})
 public class AdminServlet extends HttpServlet {
 
+    // Handles HTTP GET requests for displaying admin pages.
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res)
             throws ServletException, IOException {
