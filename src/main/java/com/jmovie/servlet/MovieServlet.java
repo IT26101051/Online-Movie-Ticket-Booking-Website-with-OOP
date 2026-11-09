@@ -135,10 +135,12 @@ public class MovieServlet extends HttpServlet {
 
     // ── Admin: Add Movie ──────────────────────────────────────────────────
 
-    // Handles adding a new movie by the administrator.
-    // Generates a unique movie ID.
-    // Creates a Movie object using the submitted form data.
-    // Saves the new movie into the database.
+    /*
+     * Handles adding a new movie by the administrator.
+     * Generates a unique movie ID.
+     * Creates a Movie object using the submitted form data.
+     * Saves the new movie into the database.
+     */
 
     private void addMovie(HttpServletRequest req, HttpServletResponse res)
             throws IOException {
