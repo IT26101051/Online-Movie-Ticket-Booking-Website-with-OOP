@@ -34,6 +34,7 @@ import java.util.UUID;
 @WebServlet(name = "BookingServlet", urlPatterns = {"/booking", "/booking/*"})
 public class BookingServlet extends HttpServlet {
 
+// Handles requests that display booking-related pages.
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res)
             throws ServletException, IOException {
