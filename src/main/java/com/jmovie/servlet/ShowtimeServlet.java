@@ -108,7 +108,7 @@ private void editShowtime(HttpServletRequest req, HttpServletResponse res)
     }
 }
 
-//DELETE SHOWTIME
+//DELETE-REMOVE SHOWTIME
 private void deleteShowtime(HttpServletRequest req, HttpServletResponse res)
         throws IOException {
 
