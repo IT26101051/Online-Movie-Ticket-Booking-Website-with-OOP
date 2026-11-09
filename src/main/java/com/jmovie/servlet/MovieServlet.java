@@ -229,7 +229,7 @@ public class MovieServlet extends HttpServlet {
         }
     }
 
-
+    // Removes unnecessary spaces from input values.
     // Returns an empty string if the input value is null.
     private String trim(String s) { return s == null ? "" : s.trim(); }
 }
