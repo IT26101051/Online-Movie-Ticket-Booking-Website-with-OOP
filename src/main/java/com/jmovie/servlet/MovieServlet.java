@@ -49,6 +49,9 @@ public class MovieServlet extends HttpServlet {
      *
      * If the path starts with "/detail/",
      * it extracts the movie ID and displays movie details.
+     *
+     * For any other path, it redirects the user
+     * to the main movie listing page.
      */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res)
@@ -74,6 +77,8 @@ public class MovieServlet extends HttpServlet {
      *  - add: Add a new movie.
      *  - edit: Update an existing movie.
      *  - delete: Delete a movie.
+     *
+     *  If the action is invalid, redirects to the admin movie management page.
      */
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse res)
@@ -94,6 +99,8 @@ public class MovieServlet extends HttpServlet {
     // ── List all / search ──────────────────────────────────────────────────
 
     // Handles movie listing and search functionality.
+    // Retrieves the search keyword from the request.
+    // Retrieves the selected movie genre.
     private void listMovies(HttpServletRequest req, HttpServletResponse res)
             throws ServletException, IOException {
         String q     = req.getParameter("q");
