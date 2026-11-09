@@ -35,6 +35,7 @@ import java.util.UUID;
 public class BookingServlet extends HttpServlet {
 
 // Handles requests that display booking-related pages.
+// Login is checked first so only authenticated users can access these pages.
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res)
             throws ServletException, IOException {
