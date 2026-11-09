@@ -2,6 +2,7 @@
 
 // Package declaration
 
+
 package com.jmovie.servlet;
 
 import com.jmovie.db.MovieDAO;
@@ -18,13 +19,41 @@ import javax.servlet.http.*;
 import java.io.IOException;
 import java.util.List;
 
+
+
 /**
  * Handles movie listing, detail, and admin CRUD operations via MySQL database.
  * Routes: /movies, /movies/detail/{id}, POST /movies/add|edit|delete
+ * MovieServlet handles movie-related operations.
+ *
+ * Main responsibilities:
+ *   1. Display all movies.
+ *   2. Display individual movie details.
+ *   3. Allow administrators to add, edit, and delete movies.
+ *
+ * URL mappings:
+ *   /movies          - Display all movies.
+ *   /movies/detail/{id} - Display movie details.
+ *   /movies/add - Add a new movie.
+ *   /movies/edit - Edit an existing movie.
+ *   /movies/delete - Delete a movie.
  */
 @WebServlet(name = "MovieServlet", urlPatterns = {"/movies", "/movies/*"})
 public class MovieServlet extends HttpServlet {
 
+    /**
+     * Handles HTTP GET requests.
+     *
+     * If the requested path is empty or "/",
+     * it displays the list of all movies.
+     *
+     * If the path starts with "/detail/",
+     * it extracts the movie ID and displays movie details.
+     *
+     * For any other path, it redirects the user
+     *  to the main movie listing page.
+     *
+     */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res)
             throws ServletException, IOException {
@@ -39,6 +68,19 @@ public class MovieServlet extends HttpServlet {
         }
     }
 
+    /**
+     * Handles HTTP POST requests for movie management.
+     *
+     * First, checks whether the logged-in user is an administrator.
+     * Then retrieves the action parameter from the request.
+     *
+     * Based on the action, it performs one of the following:
+     *  - add: Add a new movie.
+     *  - edit: Update an existing movie.
+     *  - delete: Delete a movie.
+     *
+     *  If the action is invalid, redirects to the admin movie management page.
+     */
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse res)
             throws ServletException, IOException {
@@ -56,6 +98,10 @@ public class MovieServlet extends HttpServlet {
     }
 
     // ── List all / search ──────────────────────────────────────────────────
+
+    // Handles movie listing and search functionality.
+    // Retrieves the search keyword from the request.
+    // Retrieves the selected movie genre.
     private void listMovies(HttpServletRequest req, HttpServletResponse res)
             throws ServletException, IOException {
         String q     = req.getParameter("q");
