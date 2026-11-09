@@ -45,7 +45,7 @@ public class AuthServlet extends HttpServlet {
                 req.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(req, res);
         }
     }
-
+//Handle POST requests
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse res)
             throws ServletException, IOException {
