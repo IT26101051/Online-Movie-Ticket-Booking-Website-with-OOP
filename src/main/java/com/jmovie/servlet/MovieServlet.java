@@ -147,6 +147,9 @@ public class MovieServlet extends HttpServlet {
     }
 
     // ── Admin: Edit Movie ─────────────────────────────────────────────────
+
+    // Updates the corresponding movie record in the database.
+    // Redirects with a success or error message.
     private void editMovie(HttpServletRequest req, HttpServletResponse res)
             throws IOException {
         try {
