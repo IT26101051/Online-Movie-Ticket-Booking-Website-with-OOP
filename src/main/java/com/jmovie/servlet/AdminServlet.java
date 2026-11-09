@@ -1,5 +1,6 @@
 package com.jmovie.servlet;
 
+// Imports database access classes (DAO) and model classes.
 import com.jmovie.db.*;
 import com.jmovie.model.*;
 
@@ -144,4 +145,6 @@ public class AdminServlet extends HttpServlet {
 //// test 102
 
 
-/// kavin update dashboard 101
+///  
+
+/// kavin update dashboard 102

@@ -6,6 +6,23 @@
   <component name="ChangeListManager">
     <list default="true" id="cb1057db-dfde-4182-aee2-1651ff8c7757" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jmovie/servlet/AdminServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jmovie/servlet/AdminServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/conf/tomcat-users.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/conf/tomcat-users.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/jmovie/WEB-INF/classes/com/jmovie/servlet/ReviewServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/jmovie/WEB-INF/classes/com/jmovie/servlet/ReviewServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/jmovie/WEB-INF/classes/com/jmovie/servlet/ShowtimeServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/jmovie/WEB-INF/classes/com/jmovie/servlet/ShowtimeServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/work/Tomcat/localhost/jmovie/org/apache/jsp/WEB_002dINF/fragments/footer_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/work/Tomcat/localhost/jmovie/org/apache/jsp/WEB_002dINF/fragments/footer_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/work/Tomcat/localhost/jmovie/org/apache/jsp/WEB_002dINF/fragments/navbar_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/work/Tomcat/localhost/jmovie/org/apache/jsp/WEB_002dINF/fragments/navbar_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/work/Tomcat/localhost/jmovie/org/apache/jsp/error_jsp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/work/Tomcat/localhost/jmovie/org/apache/jsp/error_jsp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/work/Tomcat/localhost/jmovie/org/apache/jsp/index_jsp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/work/Tomcat/localhost/jmovie/org/apache/jsp/index_jsp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jmovie/servlet/ReviewServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jmovie/servlet/ReviewServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jmovie/servlet/ShowtimeServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jmovie/servlet/ShowtimeServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jmovie-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/jmovie-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jmovie-1.0-SNAPSHOT/WEB-INF/classes/com/jmovie/servlet/ReviewServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/jmovie-1.0-SNAPSHOT/WEB-INF/classes/com/jmovie/servlet/ReviewServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jmovie-1.0-SNAPSHOT/WEB-INF/classes/com/jmovie/servlet/ShowtimeServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/jmovie-1.0-SNAPSHOT/WEB-INF/classes/com/jmovie/servlet/ShowtimeServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +48,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "Paboda",
+    "git-widget-placeholder": "kavin",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/projects/Jmovies-main",
     "nodejs_package_manager_path": "npm"
