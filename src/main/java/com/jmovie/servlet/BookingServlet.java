@@ -3,6 +3,7 @@
 
 package com.jmovie.servlet;
 
+// DAO classes are used to retrieve and update booking, movie, and showtime data in the database.
 import com.jmovie.db.BookingDAO;
 import com.jmovie.db.MovieDAO;
 import com.jmovie.db.ShowtimeDAO;
