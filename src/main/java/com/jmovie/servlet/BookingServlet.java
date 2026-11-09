@@ -29,6 +29,7 @@ import java.util.UUID;
  * - My Bookings List & Cancellation (/booking, /booking/cancel)
  */
 // Maps the /booking URL and its sub-paths to this servlet.
+// The sub-path is used below to decide which booking operation should run.
 @WebServlet(name = "BookingServlet", urlPatterns = {"/booking", "/booking/*"})
 public class BookingServlet extends HttpServlet {
 
