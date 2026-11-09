@@ -230,6 +230,7 @@ public class MovieServlet extends HttpServlet {
     }
 
 
+    // Returns an empty string if the input value is null.
     private String trim(String s) { return s == null ? "" : s.trim(); }
 }
 
