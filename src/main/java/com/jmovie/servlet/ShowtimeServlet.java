@@ -140,7 +140,7 @@ private Showtime buildFromRequest(String id, HttpServletRequest req) {
             total, total, price, "");
 }
 
-// ADMIN AUTHORIZATION
+// CHECK ADMIN ACCESS
 
     private void requireAdmin(HttpServletRequest req, HttpServletResponse res)
             throws IOException {
