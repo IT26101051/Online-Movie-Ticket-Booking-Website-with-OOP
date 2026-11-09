@@ -135,12 +135,15 @@ public class MovieServlet extends HttpServlet {
 
     // ── Admin: Add Movie ──────────────────────────────────────────────────
 
+    // Handles adding a new movie by the administrator.
+
     /*
-     * Handles adding a new movie by the administrator.
      * Generates a unique movie ID.
      * Creates a Movie object using the submitted form data.
      * Saves the new movie into the database.
      */
+
+    // Redirects with a success or error message.
 
     private void addMovie(HttpServletRequest req, HttpServletResponse res)
             throws IOException {
@@ -156,7 +159,13 @@ public class MovieServlet extends HttpServlet {
     // ── Admin: Edit Movie ─────────────────────────────────────────────────
 
     // Handles updating an existing movie.
-    // Updates the corresponding movie record in the database.
+
+    /*
+     * Updates the corresponding movie record in the database.
+     * Retrieves the movie ID from the submitted form.
+     * Builds an updated Movie object using the new form data.
+     */
+
     // Redirects with a success or error message.
     private void editMovie(HttpServletRequest req, HttpServletResponse res)
             throws IOException {
@@ -171,6 +180,11 @@ public class MovieServlet extends HttpServlet {
     }
 
     // ── Admin: Delete Movie ───────────────────────────────────────────────
+
+    // Handles deleting a movie by the administrator.
+    // Retrieves the movie ID from the request.
+    // Deletes the corresponding movie record from the database.
+    // Redirects to the movie management page with a success message.
     private void deleteMovie(HttpServletRequest req, HttpServletResponse res)
             throws IOException {
         String id = req.getParameter("id");
@@ -180,10 +194,15 @@ public class MovieServlet extends HttpServlet {
 
     // ── Helpers ────────────────────────────────────────────────────────────
 
-    // Helper method to create a Movie object from form data.
-    // Retrieves and cleans all submitted movie details.
-    // Converts duration and rating into numeric values.
-    // Sets the default status to NOW_SHOWING if no status is provided
+    /*
+     * Helper method to create a Movie object from form data.
+     * Retrieves and cleans all submitted movie details.
+     * Converts duration and rating into numeric values.
+     */
+
+    // Sets the default status to NOW_SHOWING if no status is provided.
+    // Returns a new Movie object containing the submitted information.
+
     private Movie buildMovieFromRequest(String id, HttpServletRequest req) {
         String title       = trim(req.getParameter("title"));
         String genre       = trim(req.getParameter("genre"));
@@ -196,9 +215,15 @@ public class MovieServlet extends HttpServlet {
         if (status.isEmpty()) status = "NOW_SHOWING";
         return new Movie(id, title, genre, description, duration, rating, posterUrl, releaseDate, status);
     }
-    // Checks whether the current user has administrator privileges.
+
+    // Verifies that the current user has admin privileges.
     // Retrieves the existing HTTP session.
-    // redirects the user to the login page.
+
+    /*
+     * If no session exists or the user is not an administrator,
+     * redirects the user to the login page.
+     */
+
     private void requireAdmin(HttpServletRequest req, HttpServletResponse res) throws IOException {
         HttpSession session = req.getSession(false);
         if (session == null || !"ADMIN".equals(session.getAttribute("role"))) {
@@ -206,7 +231,8 @@ public class MovieServlet extends HttpServlet {
         }
     }
 
-
+    // Removes unnecessary spaces from input values.
+    // Returns an empty string if the input value is null.
     private String trim(String s) { return s == null ? "" : s.trim(); }
 }
 
@@ -214,4 +240,3 @@ public class MovieServlet extends HttpServlet {
 
 // Paboda Update 102
 
-// Paboda Update 103
