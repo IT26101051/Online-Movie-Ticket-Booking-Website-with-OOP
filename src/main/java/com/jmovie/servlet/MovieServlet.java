@@ -134,6 +134,14 @@ public class MovieServlet extends HttpServlet {
     }
 
     // ── Admin: Add Movie ──────────────────────────────────────────────────
+
+    /*
+     * Handles adding a new movie by the administrator.
+     * Generates a unique movie ID.
+     * Creates a Movie object using the submitted form data.
+     * Saves the new movie into the database.
+     */
+
     private void addMovie(HttpServletRequest req, HttpServletResponse res)
             throws IOException {
         try {
@@ -146,6 +154,10 @@ public class MovieServlet extends HttpServlet {
     }
 
     // ── Admin: Edit Movie ─────────────────────────────────────────────────
+
+    // Handles updating an existing movie.
+    // Updates the corresponding movie record in the database.
+    // Redirects with a success or error message.
     private void editMovie(HttpServletRequest req, HttpServletResponse res)
             throws IOException {
         try {
@@ -167,6 +179,11 @@ public class MovieServlet extends HttpServlet {
     }
 
     // ── Helpers ────────────────────────────────────────────────────────────
+
+    // Helper method to create a Movie object from form data.
+    // Retrieves and cleans all submitted movie details.
+    // Converts duration and rating into numeric values.
+    // Sets the default status to NOW_SHOWING if no status is provided
     private Movie buildMovieFromRequest(String id, HttpServletRequest req) {
         String title       = trim(req.getParameter("title"));
         String genre       = trim(req.getParameter("genre"));
@@ -179,7 +196,9 @@ public class MovieServlet extends HttpServlet {
         if (status.isEmpty()) status = "NOW_SHOWING";
         return new Movie(id, title, genre, description, duration, rating, posterUrl, releaseDate, status);
     }
-
+    // Checks whether the current user has administrator privileges.
+    // Retrieves the existing HTTP session.
+    // redirects the user to the login page.
     private void requireAdmin(HttpServletRequest req, HttpServletResponse res) throws IOException {
         HttpSession session = req.getSession(false);
         if (session == null || !"ADMIN".equals(session.getAttribute("role"))) {
