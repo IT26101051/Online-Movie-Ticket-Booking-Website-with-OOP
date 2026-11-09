@@ -184,6 +184,7 @@ public class MovieServlet extends HttpServlet {
     // Handles deleting a movie by the administrator.
     // Retrieves the movie ID from the request.
     // Deletes the corresponding movie record from the database.
+    // Redirects to the movie management page with a success message.
     private void deleteMovie(HttpServletRequest req, HttpServletResponse res)
             throws IOException {
         String id = req.getParameter("id");
