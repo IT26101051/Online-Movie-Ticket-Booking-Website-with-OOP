@@ -51,7 +51,7 @@ public class MovieServlet extends HttpServlet {
      * it extracts the movie ID and displays movie details.
      *
      * For any other path, it redirects the user
-     * to the main movie listing page.
+     *
      */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res)
