@@ -167,6 +167,9 @@ public class MovieServlet extends HttpServlet {
     }
 
     // ── Helpers ────────────────────────────────────────────────────────────
+
+    // Helper method to create a Movie object from form data.
+    // Retrieves and cleans all submitted movie details.
     private Movie buildMovieFromRequest(String id, HttpServletRequest req) {
         String title       = trim(req.getParameter("title"));
         String genre       = trim(req.getParameter("genre"));
@@ -180,6 +183,8 @@ public class MovieServlet extends HttpServlet {
         return new Movie(id, title, genre, description, duration, rating, posterUrl, releaseDate, status);
     }
 
+    // If no session exists or the user is not an administrator.
+    // redirects the user to the login page.
     private void requireAdmin(HttpServletRequest req, HttpServletResponse res) throws IOException {
         HttpSession session = req.getSession(false);
         if (session == null || !"ADMIN".equals(session.getAttribute("role"))) {
