@@ -148,6 +148,7 @@ public class MovieServlet extends HttpServlet {
 
     // ── Admin: Edit Movie ─────────────────────────────────────────────────
 
+    // Handles updating an existing movie.
     // Updates the corresponding movie record in the database.
     // Redirects with a success or error message.
     private void editMovie(HttpServletRequest req, HttpServletResponse res)
