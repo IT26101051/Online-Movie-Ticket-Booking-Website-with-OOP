@@ -26,6 +26,11 @@ import java.util.List;
  * Routes: /movies, /movies/detail/{id}, POST /movies/add|edit|delete
  * MovieServlet handles movie-related operations.
  *
+ * Main responsibilities:
+ *   1. Display all movies.
+ *   2. Display individual movie details.
+ *   3. Allow administrators to add, edit, and delete movies.
+ *
  * URL mappings:
  *   /movies          - Display all movies.
  *   /movies/detail/{id} - Display movie details.
