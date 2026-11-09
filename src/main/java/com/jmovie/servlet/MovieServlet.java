@@ -92,6 +92,8 @@ public class MovieServlet extends HttpServlet {
     }
 
     // ── List all / search ──────────────────────────────────────────────────
+
+    // Handles movie listing and search functionality.
     private void listMovies(HttpServletRequest req, HttpServletResponse res)
             throws ServletException, IOException {
         String q     = req.getParameter("q");
