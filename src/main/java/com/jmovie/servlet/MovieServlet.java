@@ -134,6 +134,9 @@ public class MovieServlet extends HttpServlet {
     }
 
     // ── Admin: Add Movie ──────────────────────────────────────────────────
+
+    // Handles adding a new movie by the administrator.
+
     private void addMovie(HttpServletRequest req, HttpServletResponse res)
             throws IOException {
         try {
