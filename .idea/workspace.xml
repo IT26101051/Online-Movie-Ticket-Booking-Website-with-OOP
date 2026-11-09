@@ -5,7 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb1057db-dfde-4182-aee2-1651ff8c7757" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jmovie/servlet/ReviewServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jmovie/servlet/ReviewServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/conf/tomcat-users.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/conf/tomcat-users.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/jmovie/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/jmovie/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/jmovie/WEB-INF/classes/com/jmovie/servlet/ReviewServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/jmovie/WEB-INF/classes/com/jmovie/servlet/ReviewServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/jmovie/WEB-INF/classes/com/jmovie/servlet/ShowtimeServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/webapps/jmovie/WEB-INF/classes/com/jmovie/servlet/ShowtimeServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/work/Tomcat/localhost/jmovie/org/apache/jsp/WEB_002dINF/fragments/footer_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/work/Tomcat/localhost/jmovie/org/apache/jsp/WEB_002dINF/fragments/footer_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/work/Tomcat/localhost/jmovie/org/apache/jsp/WEB_002dINF/fragments/navbar_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/work/Tomcat/localhost/jmovie/org/apache/jsp/WEB_002dINF/fragments/navbar_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/work/Tomcat/localhost/jmovie/org/apache/jsp/error_jsp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/work/Tomcat/localhost/jmovie/org/apache/jsp/index_jsp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cargo/configurations/tomcat9x/work/Tomcat/localhost/jmovie/org/apache/jsp/index_jsp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jmovie/servlet/ReviewServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jmovie/servlet/ReviewServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jmovie/servlet/ShowtimeServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jmovie/servlet/ShowtimeServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jmovie-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/jmovie-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jmovie-1.0-SNAPSHOT/WEB-INF/classes/com/jmovie/servlet/ReviewServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/jmovie-1.0-SNAPSHOT/WEB-INF/classes/com/jmovie/servlet/ReviewServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jmovie-1.0-SNAPSHOT/WEB-INF/classes/com/jmovie/servlet/ShowtimeServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/jmovie-1.0-SNAPSHOT/WEB-INF/classes/com/jmovie/servlet/ShowtimeServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,10 +30,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7,
-  "fromUser": false
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7,
+  &quot;fromUser&quot;: false
+}</component>
   <component name="ProjectId" id="3LK1rdAE75K0wI90S0dq1AQuRk3" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -31,17 +46,18 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "kavin",
+    "git-widget-placeholder": "ushan",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/projects/Jmovies-main",
+    "last_opened_file_path": "C:/Online-Movie-Ticket-Booking-Website-with-OOP",
     "nodejs_package_manager_path": "npm"
   }
 }]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-34e2839f716b-intellij.indexing.shared.core-IU-262.9437.185" />
-        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.9437.185" />
+        <option value="bundled-jdk-30f59d01ecdd-a203e0a19954-intellij.indexing.shared.core-IU-262.10315.125" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.10315.125" />
       </set>
     </attachedChunks>
   </component>
