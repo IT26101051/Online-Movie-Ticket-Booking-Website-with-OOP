@@ -25,7 +25,7 @@ import java.time.format.DateTimeFormatter;
 @WebServlet(name = "AuthServlet", urlPatterns = {"/auth", "/auth/*"})
 public class AuthServlet extends HttpServlet {
 
-
+//Handle GET requests
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res)
             throws ServletException, IOException {
