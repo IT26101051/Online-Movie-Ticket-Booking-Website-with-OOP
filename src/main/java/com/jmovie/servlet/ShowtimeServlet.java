@@ -1,6 +1,6 @@
 /////// SHOW TIME - KANCHANA
 
-//IMPORTS & SERVLET SETUP
+//IMPORTS AND SERVLET SETUP
 package com.jmovie.servlet;
 
 import com.jmovie.db.MovieDAO;
