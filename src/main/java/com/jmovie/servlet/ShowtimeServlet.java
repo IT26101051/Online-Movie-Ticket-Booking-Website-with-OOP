@@ -1,6 +1,6 @@
 /////// SHOW TIME - KANCHANA
 
-//IMPORTS & SERVLET SETUP
+//IMPORTS AND SERVLET SETUP
 package com.jmovie.servlet;
 
 import com.jmovie.db.MovieDAO;
@@ -22,7 +22,7 @@ import java.util.List;
 @WebServlet(name = "ShowtimeServlet", urlPatterns = {"/showtimes", "/showtimes/*"})
 public class ShowtimeServlet extends HttpServlet {
 
-//DISPLAY SHOWTIMES (doGet)
+//READ-DISPLAY SHOWTIMES (doGet)
 @Override
 protected void doGet(HttpServletRequest req, HttpServletResponse res)
         throws ServletException, IOException {
@@ -72,7 +72,7 @@ protected void doPost(HttpServletRequest req, HttpServletResponse res)
     }
 }
 
-//ADD SHOWTIME
+// CREATE-ADD SHOWTIME
 private void addShowtime(HttpServletRequest req, HttpServletResponse res)
         throws IOException {
 
@@ -89,7 +89,7 @@ private void addShowtime(HttpServletRequest req, HttpServletResponse res)
     }
 }
 
-//EDIT SHOWTIME
+//UPDATE-EDIT SHOWTIME
 private void editShowtime(HttpServletRequest req, HttpServletResponse res)
         throws IOException {
 
@@ -108,7 +108,7 @@ private void editShowtime(HttpServletRequest req, HttpServletResponse res)
     }
 }
 
-//DELETE SHOWTIME
+//DELETE-REMOVE SHOWTIME
 private void deleteShowtime(HttpServletRequest req, HttpServletResponse res)
         throws IOException {
 
@@ -140,7 +140,7 @@ private Showtime buildFromRequest(String id, HttpServletRequest req) {
             total, total, price, "");
 }
 
-// ADMIN AUTHORIZATION
+// CHECK ADMIN ACCESS
 
     private void requireAdmin(HttpServletRequest req, HttpServletResponse res)
             throws IOException {
