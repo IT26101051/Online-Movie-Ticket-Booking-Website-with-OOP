@@ -157,6 +157,8 @@ public class MovieServlet extends HttpServlet {
 
     // Handles updating an existing movie.
     // Updates the corresponding movie record in the database.
+    // Retrieves the movie ID from the submitted form.
+    // Builds an updated Movie object using the new form data.
     // Redirects with a success or error message.
     private void editMovie(HttpServletRequest req, HttpServletResponse res)
             throws IOException {
