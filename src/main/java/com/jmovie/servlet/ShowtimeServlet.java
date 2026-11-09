@@ -22,7 +22,7 @@ import java.util.List;
 @WebServlet(name = "ShowtimeServlet", urlPatterns = {"/showtimes", "/showtimes/*"})
 public class ShowtimeServlet extends HttpServlet {
 
-//DISPLAY SHOWTIMES (doGet)
+//READ-DISPLAY SHOWTIMES (doGet)
 @Override
 protected void doGet(HttpServletRequest req, HttpServletResponse res)
         throws ServletException, IOException {
