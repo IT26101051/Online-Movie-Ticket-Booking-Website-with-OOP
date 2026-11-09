@@ -3,6 +3,7 @@
 
 package com.jmovie.servlet;
 
+// DAO classes are used to retrieve and update booking, movie, and showtime data in the database.
 import com.jmovie.db.BookingDAO;
 import com.jmovie.db.MovieDAO;
 import com.jmovie.db.ShowtimeDAO;
@@ -33,12 +34,15 @@ import java.util.UUID;
 @WebServlet(name = "BookingServlet", urlPatterns = {"/booking", "/booking/*"})
 public class BookingServlet extends HttpServlet {
 
+// Handles requests that display booking-related pages.
+// Login is checked first so only authenticated users can access these pages.
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res)
             throws ServletException, IOException {
         requireLogin(req, res);
         if (res.isCommitted()) return;
 
+ // Read the URL sub-path to identify the page requested by the user.
         String path = req.getPathInfo();
         if ("/new".equals(path)) {
             showBookingPage(req, res);
@@ -293,7 +297,7 @@ public class BookingServlet extends HttpServlet {
 
         res.sendRedirect(req.getContextPath() + "/booking?msg=cancelled");
     }
-
+    // Shared authentication check used by both GET and POST requests in this servlet.
     // ── Auth Guard ─────────────────────────────────────────────────────────
     private void requireLogin(HttpServletRequest req, HttpServletResponse res) throws IOException {
         HttpSession s = req.getSession(false);
