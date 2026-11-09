@@ -89,7 +89,7 @@ private void addShowtime(HttpServletRequest req, HttpServletResponse res)
     }
 }
 
-//EDIT SHOWTIME
+//UPDATE-EDIT SHOWTIME
 private void editShowtime(HttpServletRequest req, HttpServletResponse res)
         throws IOException {
 
