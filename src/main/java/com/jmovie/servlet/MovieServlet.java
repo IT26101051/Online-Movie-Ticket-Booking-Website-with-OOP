@@ -143,6 +143,8 @@ public class MovieServlet extends HttpServlet {
      * Saves the new movie into the database.
      */
 
+    // Redirects with a success or error message.
+
     private void addMovie(HttpServletRequest req, HttpServletResponse res)
             throws IOException {
         try {
