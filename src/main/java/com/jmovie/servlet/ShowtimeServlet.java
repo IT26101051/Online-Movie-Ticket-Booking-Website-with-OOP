@@ -141,14 +141,14 @@ private Showtime buildFromRequest(String id, HttpServletRequest req) {
 }
 
 // CHECK ADMIN ACCESS
+private void requireAdmin(HttpServletRequest req, HttpServletResponse res)
+        throws IOException {
 
-    private void requireAdmin(HttpServletRequest req, HttpServletResponse res)
-            throws IOException {
+    HttpSession s = req.getSession(false);
 
-        HttpSession s = req.getSession(false);
-
-        if (s == null || !"ADMIN".equals(s.getAttribute("role"))) {
-            res.sendRedirect(req.getContextPath() + "/auth/login?error=unauthorized");
-        }
+    if (s == null || !"ADMIN".equals(s.getAttribute("role"))) {
+        res.sendRedirect(req.getContextPath() + "/auth/login?error=unauthorized");
     }
+}
+
 }
