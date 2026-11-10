@@ -116,9 +116,11 @@ public class MovieServlet extends HttpServlet {
     }
 
     // ── Movie detail page ─────────────────────────────────────────────────
+
     // Handles the movie detail page.
     // Retrieves the selected movie using its ID.
     // Also retrieves available showtimes and approved reviews.
+    // Forwards all retrieved data to the movie detail JSP page.
 
     private void showDetail(HttpServletRequest req, HttpServletResponse res, String movieId)
             throws ServletException, IOException {
