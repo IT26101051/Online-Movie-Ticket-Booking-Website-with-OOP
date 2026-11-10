@@ -117,6 +117,7 @@ public class MovieServlet extends HttpServlet {
 
     // ── Movie detail page ─────────────────────────────────────────────────
     // Handles the movie detail page.
+    // Retrieves the selected movie using its ID.
     private void showDetail(HttpServletRequest req, HttpServletResponse res, String movieId)
             throws ServletException, IOException {
         Movie movie = MovieDAO.findById(movieId);
