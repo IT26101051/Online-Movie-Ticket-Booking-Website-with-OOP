@@ -237,7 +237,9 @@ public class MovieServlet extends HttpServlet {
         }
     }
 
-
+    /**
+     * Trims input whitespace and returns an empty string if null.
+     */
     private String trim(String s) { return s == null ? "" : s.trim(); }
 }
 
