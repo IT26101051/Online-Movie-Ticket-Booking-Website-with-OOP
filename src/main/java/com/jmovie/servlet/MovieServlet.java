@@ -116,6 +116,12 @@ public class MovieServlet extends HttpServlet {
     }
 
     // ── Movie detail page ─────────────────────────────────────────────────
+
+    // Handles the movie detail page.
+    // Retrieves the selected movie using its ID.
+    // Also retrieves available showtimes and approved reviews.
+    // Forwards all retrieved data to the movie detail JSP page.
+
     private void showDetail(HttpServletRequest req, HttpServletResponse res, String movieId)
             throws ServletException, IOException {
         Movie movie = MovieDAO.findById(movieId);
@@ -231,8 +237,9 @@ public class MovieServlet extends HttpServlet {
         }
     }
 
-    // Removes unnecessary spaces from input values.
-    // Returns an empty string if the input value is null.
+    /**
+     * Trims input whitespace and returns an empty string if null
+     */
     private String trim(String s) { return s == null ? "" : s.trim(); }
 }
 
